@@ -6,7 +6,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => console.log("Database connected"))
-  .catch((error) => console.log(error));
+  .catch((error) => console.log("Database not connected",error));
 
 console.log(mongoose.connection.readyState);
 
