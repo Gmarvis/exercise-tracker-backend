@@ -56,24 +56,12 @@ router.post("/", async (req, res) => {
       date,
     });
 
-    const redirectTo = `http://localhost:9000/api/user/${createdExercise.userId}/exercises`
-    res.redirect(redirectTo);
- 
+    // const redirectTo = `http://localhost:9000/api/user/${createdExercise.userId}/exercises`
+    const redirectTo = `https://exercise-tracker-ie28.onrender.com/api/user/${createdExercise.userId}/exercises`
 
     
-    // if (createdExercise) {
-    //   res.json({
-    //     _id: userId,
-    //     Username: foundUser.username,
-    //     description,
-    //     duration,
-    //     date: date,
-    //   });
+    res.redirect(redirectTo);
 
-    // } else {
-    //   // console.log("not created")
-    //   res.send("not created");
-    // }
   } catch (err) {
     res.json({ "errorMessage:": err });
   }
